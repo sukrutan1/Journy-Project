@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: journy_db
+    restart: always
+    environment:
+      POSTGRES_USER: journy_user
+      POSTGRES_PASSWORD: journy_password
+      POSTGRES_DB: journy_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

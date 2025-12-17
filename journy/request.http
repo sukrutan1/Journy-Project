@@ -1,0 +1,71 @@
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password",
+  "fullName": "Test User"
+}
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password"
+}
+
+
+###
+
+GET http://localhost:8080/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+
+###
+
+POST http://localhost:8080/visits
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+Content-Type: application/json
+
+{
+  "countryCode": "FRA",
+  "color": "#0000FF",
+  "notes": "I visit Eiffel Tower."
+}
+
+###
+GET http://localhost:8080/visits
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+
+###
+DELETE http://localhost:8080/visits/fa8aee37-adca-4ce5-94d8-c7a65cace6f6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+
+
+###
+PUT http://localhost:8080/visits/4f525855-f3ad-4552-bf2a-795614f06906
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+Content-Type: application/json
+
+{
+  "color": "#00FF00",
+  "notes": "Color and note changed"
+}
+
+
+###
+POST http://localhost:8080/visits
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
+Content-Type: application/json
+
+{
+  "countryCode": "TUR",
+  "color": "#0000FF",
+  "notes": "I visit Galata Tower"
+}
+
+###
+DELETE http://localhost:8080/visits/bf105826-f5c0-4ed1-8205-a583237c8e2d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiN2QxMDZmMy0yMDgzLTQ3MGUtOTM2Ni0yM2Q0MTM3ODk2OWQiLCJpYXQiOjE3NjU3NzMwNzUsImV4cCI6MTc2NjM3Nzg3NX0.y_ZJ1rmcbaRe7BZM2_femsZrn_J-ztmXvxuRL4QLvrQ
